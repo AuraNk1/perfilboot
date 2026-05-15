@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VIDEOGAMES</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #050505, #141414);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .fondo-gamer {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            background:
+                radial-gradient(circle at top left,
+                    rgba(0,255,255,0.12),
+                    transparent),
+                radial-gradient(circle at bottom right,
+                    rgba(255,0,255,0.10),
+                    transparent);
+            z-index: -1;
+        }
+
+        header {
+            text-align: center;
+            padding: 50px 20px;
+            background: rgba(0,0,0,0.5);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid rgba(255,255,255,0.1);
+        }
+
+        .titulo {
+            font-size: 3rem;
+            margin-bottom: 25px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.08);
+            padding: 12px 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .menu a:hover {
+            background: cyan;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        .grid-juegos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 40px 20px;
+        }
+
+        .juego {
+            background: rgba(255,255,255,0.08);
+            border-radius: 25px;
+            padding: 25px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 0 15px rgba(0,0,0,0.4);
+            transition: 0.3s;
+        }
+
+        .juego:hover {
+            transform: translateY(-5px);
+        }
+
+        .grande {
+            grid-column: span 2;
+        }
+
+        .ancho {
+            grid-column: span 2;
+        }
+
+        .juego img {
+            width: 100%;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        h3 {
+            margin-top: 25px;
+            margin-bottom: 15px;
+            color: cyan;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .decorativo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 250px;
+            background:
+                linear-gradient(135deg,
+                    rgba(255,0,0,0.2),
+                    rgba(0,0,0,0.6));
+        }
+
+        .decorativo h2 {
+            font-size: 3rem;
+            color: crimson;
+            text-shadow: 0 0 15px red;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: rgba(0,0,0,0.6);
+            margin-top: 40px;
+        }
+
+        .volver {
+            text-decoration: none;
+            color: white;
+            background: rgba(255,255,255,0.1);
+            padding: 12px 20px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .volver:hover {
+            background: crimson;
+            color: white;
+        }
+
+        .boton-modo {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .modo-claro {
+            background: #f4f4f4;
+            color: black;
+        }
+
+        .modo-claro .juego {
+            background: rgba(255,255,255,0.9);
+            color: black;
+        }
+
+        .modo-claro .menu a,
+        .modo-claro .volver {
+            color: black;
+        }
+
+        @media (max-width: 768px) {
+
+            .grande,
+            .ancho {
+                grid-column: span 1;
+            }
+
+            .titulo {
+                font-size: 2rem;
+            }
+
+            .decorativo h2 {
+                font-size: 2rem;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="fondo-gamer"></div>
+
+    <header>
+
+        <h1 class="titulo">
+            🎮 VIDEOJUEGOS
+        </h1>
+
+        <nav class="menu">
+
+            <a href="#favorito">
+                Juego favorito
+            </a>
+
+            <a href="#jugados">
+                He jugado
+            </a>
+
+            <a href="#top">
+                TOP
+            </a>
+
+        </nav>
+
+    </header>
+
+    <main class="grid-juegos">
+
+        <section class="juego grande" id="favorito">
+
+            <img src="https://i.pinimg.com/736x/45/94/b1/4594b17f58401b6a10e47def40dceefe.jpg"
+                alt="Outlast">
+
+            <h2>
+                🎮 Juego favorito
+            </h2>
+
+            <p>
+                Mi TOP 1 en videojuegos favoritos es
+                <strong>OUTLAST</strong>.
+            </p>
+
+            <h3>
+                📖 Historia breve
+            </h3>
+
+            <p>
+                Outlast es un videojuego de terror y supervivencia
+                desarrollado por Red Barrels y lanzado en 2013.
+            </p>
+
+            <ul>
+
+                <li>
+                    👤 Protagonista: Miles Upshur
+                </li>
+
+                <li>
+                    🏥 Lugar: Hospital psiquiátrico Mount Massive
+                </li>
+
+                <li>
+                    📷 Cámara con visión nocturna
+                </li>
+
+                <li>
+                    ⚠️ El jugador no tiene armas
+                </li>
+
+                <li>
+                    🏃 Debe esconderse y sobrevivir
+                </li>
+
+            </ul>
+
+            <h3>
+                ⭐ Características
+            </h3>
+
+            <ul>
+
+                <li>
+                    Terror psicológico
+                </li>
+
+                <li>
+                    Sigilo y supervivencia
+                </li>
+
+                <li>
+                    Ambientación oscura
+                </li>
+
+                <li>
+                    Gestión de baterías limitadas
+                </li>
+
+                <li>
+                    DLC y secuelas posteriores
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section class="juego" id="jugados">
+
+            <h2>
+                🕹️ Juegos que he jugado
+            </h2>
+
+            <ul>
+
+                <li>OUTLAST</li>
+                <li>OUTLAST 2</li>
+                <li>OUTLAST TRIALS</li>
+                <li>DEAD MAZE</li>
+                <li>GTA V</li>
+                <li>THE SIMS 4</li>
+                <li>Dying Light</li>
+                <li>Supermarket Simulator</li>
+                <li>Resident Evil 6</li>
+                <li>Resident Evil 7</li>
+                <li>Resident Evil 8</li>
+                <li>Subnautica</li>
+                <li>League of Legends</li>
+                <li>Detroit Become Human</li>
+
+            </ul>
+
+        </section>
+
+        <section class="juego">
+
+            <img src="https://i.pinimg.com/736x/66/bb/36/66bb36f1fbfd05667cecab12f08c73b3.jpg"
+                alt="Imagen gamer">
+
+            <h2>
+                🎮 Videojuegos
+            </h2>
+
+            <p>
+                Los videojuegos son una forma de entretenimiento,
+                arte y experiencia interactiva que conecta historias,
+                emociones y desafíos.
+            </p>
+
+        </section>
+
+        <section class="juego ancho" id="top">
+
+            <h2>
+                🎧 TOP de horas jugadas
+            </h2>
+
+            <ul>
+
+                <li>
+                    DEAD MAZE — 205,6 horas
+                </li>
+
+                <li>
+                    GTA V — 199,2 horas
+                </li>
+
+                <li>
+                    THE SIMS 4 — 173,3 horas
+                </li>
+
+                <li>
+                    OUTLAST — 56,3 horas
+                </li>
+
+                <li>
+                    DYING LIGHT — 31,1 horas
+                </li>
+
+            </ul>
+
+        </section>
+
+        <section class="juego decorativo">
+
+            <h2>
+                <img src="https://i.pinimg.com/736x/f5/c1/8b/f5c18b467f533922252d26801f0ff1f1.jpg"
+                    alt="Imagen gamer"
+                    style="width: 300px; margin-bottom: 0;">
+            </h2>
+
+        </section>
+
+    </main>
+
+    <button id="modoBtn"
+        class="btn btn-dark boton-modo">
+
+        🌙 Cambiar modo
+
+    </button>
+
+    <footer>
+
+        <a class="volver"
+            href="index.html">
+
+            ⬅ Volver
+
+        </a>
+
+        <p class="mt-4">
+            © 2026 Aura Nikolle Díaz Mendoza
+        </p>
+
+    </footer>
+
+    <script src="https://i.pinimg.com/736x/f5/c1/8b/f5c18b467f533922252d26801f0ff1f1.jpg"></script>
+
+    <script>
+
+        alert("Bienvenido a la sección de videojuegos 🎮");
+
+        const boton = document.getElementById("modoBtn");
+
+        boton.addEventListener("click", () => {
+
+            document.body.classList.toggle("modo-claro");
+
+        });
+
+        console.log("Página cargada correctamente");
+
+    </script>
+
+</body>
+
+</html>
